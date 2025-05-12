@@ -6,6 +6,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
+import { API_BASE } from "../../../api";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -32,7 +33,7 @@ const AuthForm = () => {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
   const [ph, setPh] = useState("");
-  const API_BASE = "http://localhost:5000/api/auth";
+  // const API_BASE = "http://localhost:5000/api/auth";
 
   const [loginForm, setLoginForm] = useState({
     email: "",
@@ -70,7 +71,7 @@ const AuthForm = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/auth/forgot-password",
+        '${API_BASE}/forgot-password',
         {
           email: forgotEmail,
         }

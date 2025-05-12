@@ -4,6 +4,7 @@ import "./AuthForm.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import { API } from "../../../api";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -22,13 +23,17 @@ const ForgotPassword = () => {
       return;
     }
 
+    // try {
+    //   const res = await axios.post(
+    //     "http://localhost:5000/auth/forgot-password",
+    //     {
+    //       email,
+    //     }
+    //   );
+    //12089
     try {
-      const res = await axios.post(
-        "http://localhost:5000/auth/forgot-password",
-        {
-          email,
-        }
-      );
+      const res = await axios.post(`${API}/forgot-password`, { email });
+
       setMessage("If this email is registered, a reset link will be sent.");
       toast.success("Reset email sent (if registered).");
       console.log("Reset response:", res.data);
