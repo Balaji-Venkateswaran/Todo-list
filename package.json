@@ -37,5 +37,5 @@
     "globals": "^16.0.0",
     "vite": "^6.3.1"
   },
-  "proxy": "http://localhost:5000"
+  "proxy":"https://todolist-backend-t4o7.onrender.com"
 }

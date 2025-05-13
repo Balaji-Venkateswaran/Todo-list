@@ -1,3 +1,100 @@
+// import React from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faPenToSquare,
+//   faTrash,
+//   faCheck,
+// } from "@fortawesome/free-solid-svg-icons";
+
+// export const Todo = ({
+//   task,
+//   deleteTodo,
+//   editTodo,
+//   toggleComplete,
+//   showCompletedStatus,
+// }) => {
+//   const formatDate = (isoString) => {
+//     const date = new Date(isoString);
+//     return date.toLocaleString();
+//   };
+
+//   const isDueSoon = (dueDate) => {
+//     const now = new Date();
+//     const due = new Date(dueDate);
+//     const diffInMs = due - now;
+//     const diffInHours = diffInMs / (1000 * 60 * 60);
+//     return diffInHours > 0 && diffInHours <= 2;
+//   };
+
+//   const isOverdue = (dueDate) => {
+//     const now = new Date();
+//     return new Date(dueDate) < now;
+//   };
+
+//   const showDueAlert = (dueDate) => {
+//     if (!dueDate) return false;
+
+//     const currentTime = new Date();
+//     const dueTime = new Date(dueDate);
+
+//     if (dueTime.getTime() > currentTime.getTime()) {
+//       return isDueSoon(dueDate) || isOverdue(dueDate);
+//     }
+
+//     return false;
+//   };
+
+//   return (
+//     <div className="Todo">
+//       <div>
+//         <h3 className={task.completed ? "completed" : ""}>{task.title}</h3>
+//         <p className={task.completed ? "completed" : ""}>{task.description}</p>
+
+//         {task.dueDate && (
+//           <div className="due-date-section">
+//             <p className="due-date">📅 Due: {formatDate(task.dueDate)}</p>
+
+//             {isDueSoon(task.dueDate) && !task.completed && (
+//               <p className="due-soon-alert">⚠️ Due Soon!</p>
+//             )}
+//             {isOverdue(task.dueDate) && !task.completed && (
+//               <p className="overdue-alert">❗ Overdue!</p>
+//             )}
+//           </div>
+//         )}
+
+//         {showCompletedStatus && task.completedAt && (
+//           <>
+//             <p className="status-label">✅ Completed</p>
+//             <p className="completed-time">📅 {formatDate(task.completedAt)}</p>
+//           </>
+//         )}
+//       </div>
+
+//       <div className="todo-icons">
+//         <FontAwesomeIcon
+//           className="check-icon"
+//           icon={faCheck}
+//           onClick={() => toggleComplete(task._id)}
+//         />
+//         <FontAwesomeIcon
+//           className="edit-icon"
+//           icon={faPenToSquare}
+//           onClick={() => editTodo(task._id)}
+//         />
+
+//         {deleteTodo && (
+//           <FontAwesomeIcon
+//             className="delete-icon"
+//             icon={faTrash}
+//             onClick={() => deleteTodo(task._id)}
+//           />
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -5,7 +102,7 @@ import {
   faTrash,
   faCheck,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { formatToIST } from "../../utils/date";
 export const Todo = ({
   task,
   deleteTodo,
@@ -13,9 +110,16 @@ export const Todo = ({
   toggleComplete,
   showCompletedStatus,
 }) => {
+  // const formatDate = (isoString) => {
+  //   const date = new Date(isoString);
+  //   return date.toLocaleString();
+  // };
   const formatDate = (isoString) => {
     const date = new Date(isoString);
-    return date.toLocaleString();
+    return date.toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      hour12: true,
+    });
   };
 
   const isDueSoon = (dueDate) => {
@@ -51,7 +155,7 @@ export const Todo = ({
           </span>
           {/* <span className="date-month">{dateLabel.month}</span> */}
           {task.dueDate && (
-            <p className="todo-date">📅 {formatDate(task.dueDate)}</p>
+            <p className="todo-date">📅 {formatToIST(task.dueDate)} </p>
           )}
 
           {!task.completed && isDueSoon(task.dueDate) && (
