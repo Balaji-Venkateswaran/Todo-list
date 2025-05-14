@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
 import { API_BASE } from "../../../api";
-
 import "react-toastify/dist/ReactToastify.css";
 
 const AuthForm = () => {
@@ -70,12 +69,9 @@ const AuthForm = () => {
     }
 
     try {
-      const res = await axios.post(
-        '${API_BASE}/forgot-password',
-        {
-          email: forgotEmail,
-        }
-      );
+      const res = await axios.post("${API_BASE}/forgot-password", {
+        email: forgotEmail,
+      });
       setForgotMessage(
         "If this email is registered, a reset link will be sent."
       );
@@ -190,7 +186,6 @@ const AuthForm = () => {
             value={loginForm.email}
             onChange={(e) => handleFormValidation(e.target)}
             id="email"
-
           />
 
           <label>Password</label>

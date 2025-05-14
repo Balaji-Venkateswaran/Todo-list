@@ -4,6 +4,7 @@ import { TodoForm } from "../todoList/TodoForm";
 import { Todo } from "../todoList/Todo";
 import { EditTodoForm } from "../todoList/EditTodoForm";
 import { useNavigate } from "react-router-dom";
+import { TODO_API } from "../../../api";
 
 const TaskManager = () => {
   const navigate = useNavigate();
@@ -26,8 +27,7 @@ const TaskManager = () => {
   const fetchActiveTodos = async (page = 1) => {
     try {
       // const res = await axios.get("/todos/paginated", {
-            const res = await axios.get('https://todolist-backend-t4o7.onrender.com/todos/paginated', {
-
+      const res = await axios.get(`${TODO_API}/todos/paginated`, {
         params: { page, limit, completed: false },
       });
       setActiveTodos(res.data.todos);
@@ -41,8 +41,7 @@ const TaskManager = () => {
   const fetchCompletedTodos = async (page = 1) => {
     try {
       // const res = await axios.get("/todos/paginated", {
-        const res = await axios.get('https://todolist-backend-t4o7.onrender.com/todos/paginated', {
-
+      const res = await axios.get(`${TODO_API}/todos/paginated`, {
         params: { page, limit, completed: true },
       });
       setCompletedTodos(res.data.todos);
@@ -56,7 +55,7 @@ const TaskManager = () => {
   const addTodo = async (title, description, dueDate) => {
     try {
       const newTodo = { title, description, dueDate };
-      await axios.post("/todos", newTodo);
+      await axios.post(`${TODO_API}/todos`, newTodo);
       alert("Task created successfully!");
       fetchActiveTodos(activePage);
       return true;
@@ -74,7 +73,7 @@ const TaskManager = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`/todos/${id}`);
+      await axios.delete(`${TODO_API}/todos/${id}`);
       fetchActiveTodos(activePage);
       fetchCompletedTodos(completedPage);
     } catch (err) {
@@ -94,7 +93,7 @@ const TaskManager = () => {
     };
 
     try {
-      await axios.put(`/todos/${id}`, updated);
+      await axios.put(`${TODO_API}/todos/${id}`, updated);
       fetchActiveTodos(activePage);
       fetchCompletedTodos(completedPage);
     } catch (err) {
@@ -120,7 +119,7 @@ const TaskManager = () => {
     if (!original) return;
 
     try {
-      await axios.put(`/todos/${id}`, {
+      await axios.put(`${TODO_API}/todos/${id}`, {
         title,
         description,
         dueDate,
