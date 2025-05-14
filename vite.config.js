@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // '/todos': 'http://localhost:5000',
-      '/todos': 'https://todolist-backend-t4o7.onrender.com',
+       '/todos': 'https://jouertodolist.netlify.app/',
+      // '/todos': 'https://todolist-backend-t4o7.onrender.com',
     },
   },
 })
