@@ -4,7 +4,6 @@ import { TodoForm } from "./TodoForm";
 import { Todo } from "./Todo";
 import { EditTodoForm } from "./EditTodoForm";
 import { useNavigate } from "react-router-dom";
-import { TODO_API } from "../../../api";
 
 export const TodoWrapper = () => {
   const [activeTodos, setActiveTodos] = useState([]);
@@ -31,9 +30,7 @@ export const TodoWrapper = () => {
 
   const fetchActiveTodos = async (page = 1) => {
     try {
-      // const res = await axios.get("/todos/paginated", {
-        const res = await axios.get(`${TODO_API}/paginated`, {
-
+      const res = await axios.get("/todos/paginated", {
         params: { page, limit, completed: false },
       });
       setActiveTodos(res.data.todos);
@@ -46,9 +43,7 @@ export const TodoWrapper = () => {
 
   const fetchCompletedTodos = async (page = 1) => {
     try {
-      // const res = await axios.get("/todos/paginated", {
-        const res = await axios.get(`${TODO_API}/paginated`, {
-
+      const res = await axios.get("/todos/paginated", {
         params: { page, limit, completed: true },
       });
       setCompletedTodos(res.data.todos);
@@ -62,9 +57,7 @@ export const TodoWrapper = () => {
   const addTodo = async (title, description, dueDate) => {
     try {
       const newTodo = { title, description, dueDate };
-      // await axios.post("/todos", newTodo);
-      await axios.post(`${TODO_API}`, newTodo);
-
+      await axios.post("/todos", newTodo);
       fetchActiveTodos(activePage);
       return true;
     } catch (err) {
@@ -80,10 +73,7 @@ export const TodoWrapper = () => {
     if (!confirmDelete) return;
 
     try {
-      // await axios.delete(`/todos/${id}`);
-      await axios.delete(`${TODO_API}/${id}`);
-
-
+      await axios.delete(`/todos/${id}`);
       fetchActiveTodos(activePage);
       fetchCompletedTodos(completedPage);
     } catch (err) {
@@ -103,9 +93,7 @@ export const TodoWrapper = () => {
     };
 
     try {
-      // await axios.put(`/todos/${id}`, updated);
-      await axios.put(`${TODO_API}/${id}`, updated);
-
+      await axios.put(`/todos/${id}`, updated);
       fetchActiveTodos(activePage);
       fetchCompletedTodos(completedPage);
     } catch (err) {
@@ -131,9 +119,7 @@ export const TodoWrapper = () => {
     if (!original) return;
 
     try {
-      // await axios.put(`/todos/${id}`, {
-        await axios.put(`${TODO_API}/${id}`, {
-
+      await axios.put(`/todos/${id}`, {
         title,
         description,
         dueDate,
