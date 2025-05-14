@@ -32,7 +32,7 @@ export const TodoWrapper = () => {
   const fetchActiveTodos = async (page = 1) => {
     try {
       // const res = await axios.get("/todos/paginated", {
-        const res = await axios.get('https://jouertodolist.netlify.app/todos/paginated', {
+        const res = await axios.get('https://todolist-backend-t4o7.onrender.com/todos/paginated', {
 
         params: { page, limit, completed: false },
       });
@@ -47,7 +47,7 @@ export const TodoWrapper = () => {
   const fetchCompletedTodos = async (page = 1) => {
     try {
       // const res = await axios.get("/todos/paginated", {
-        const res = await axios.get('https://jouertodolist.netlify.app/todos/paginated', {
+        const res = await axios.get('https://todolist-backend-t4o7.onrender.com/todos/paginated', {
 
         params: { page, limit, completed: true },
       });
