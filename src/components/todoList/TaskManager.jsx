@@ -25,7 +25,9 @@ const TaskManager = () => {
 
   const fetchActiveTodos = async (page = 1) => {
     try {
-      const res = await axios.get("/todos/paginated", {
+      // const res = await axios.get("/todos/paginated", {
+            const res = await axios.get('https://jouertodolist.netlify.app/todos/paginated', {
+
         params: { page, limit, completed: false },
       });
       setActiveTodos(res.data.todos);
@@ -38,7 +40,9 @@ const TaskManager = () => {
 
   const fetchCompletedTodos = async (page = 1) => {
     try {
-      const res = await axios.get("/todos/paginated", {
+      // const res = await axios.get("/todos/paginated", {
+        const res = await axios.get('https://jouertodolist.netlify.app/todos/paginated', {
+
         params: { page, limit, completed: true },
       });
       setCompletedTodos(res.data.todos);
