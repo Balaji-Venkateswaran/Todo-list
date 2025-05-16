@@ -41,7 +41,6 @@ background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 
   padding: 2rem;
   border-radius: 5px;
   width: 100vw;
-  max-width: 1200px;
   border-style: solid;
   border-color:  #222936;
   border-width: 1px;
@@ -56,9 +55,7 @@ background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 
   margin: 25px 50px 75px 100px;
   padding: 2rem;
   border-radius: 5px;
-  width: 70vw;
-  max-width: 1200px;
-  
+  width: 70vw;  
   border-style: solid;
   border-color:  #222936;
   border-width: 1px;
