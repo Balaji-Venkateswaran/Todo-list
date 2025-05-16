@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #E2DFF2;
+  background: #070F18;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,13 +20,16 @@ body {
 }
 
 h1 {
-  
+  color:#FFFFFF;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+font-size: clamp(2rem, 10vw, 2.15rem);
   margin-bottom: 0.5rem;
-  font-size: 1.75rem;
 }
 
 .TodoWrapper {
-  background: #F6F5FC;
+  background: #121212;
   margin: 25px 50px 75px 100px;
   padding: 2rem;
   border-radius: 5px;
@@ -34,7 +37,7 @@ h1 {
   max-width: 1200px;
 }
 .AuthForm {
-  background: #F6F5FC;
+  background:#121212;
   margin: 25px 50px 75px 100px;
   padding: 2rem;
   border-radius: 5px;
@@ -54,8 +57,10 @@ label {
 }
 .todo-input {
   outline: none;
-  background: none;
-  border: 1px solid #DBDBE3;
+  background: #05070A;
+  color: #3E485E;
+
+  border: 1px solid #566481;
   padding: 0.5rem 1rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
@@ -67,7 +72,7 @@ label {
 }
 
 .todo-btn {
-  background: #314FF9;
+  background:#90CAF9;
   border: none;
   padding: 0.55rem 1.25rem;
   cursor: pointer;
@@ -75,7 +80,7 @@ label {
 }
 
 .todo-btn:hover {
-  background: #6a43d4;
+  background: #42A5F5;
 }
 
 .tabs {
@@ -86,18 +91,18 @@ label {
 
 .tab-btn {
   padding: 10px 20px;
-  background-color:rgb(0, 16, 107);
+  background:#90CAF9;
+  /* background-color: #F5F6FA; */
   border: none;
   cursor: pointer;
   font-weight: bold;
-  margin: 0 5px;
   border-radius: 5px;
-  transition: 0.3s;
-  color: #fff;
+  /* color: #fff; */
+  transition: background 0.3s;
 }
 
 .tab-btn.active {
-  background-color: #314FF9;
+  background-color: #42A5F5;
 }
 
 .task-columns {
@@ -248,16 +253,16 @@ label {
 .TodoForm label {
   font-size: 0.9rem;
   margin-bottom: 0.25rem;
-  margin-top: 1rem; /* Add space above the label */
+  margin-top: 1rem; 
 }
 
 .todo-input {
   outline: none;
   background: none;
-  border: 1px solid #DBDBE3;
-  padding: 0.5rem 1rem;
+  background: #05070A;
+  color: #3E485E;
+    padding: 0.5rem 1rem;
   width: 300px;
-  /* color: #fff; */
 }
 
 .pagination {

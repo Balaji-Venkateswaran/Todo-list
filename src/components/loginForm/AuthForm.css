@@ -8,11 +8,11 @@
 }
 
 body {
-  background: #8758ff;
-  min-height: 100vh;
+  background: #070F18;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .hover-text {
@@ -23,7 +23,7 @@ body {
   color: white;
 }
 .TodoWrapper {
-  background: #1a1a40;
+  background: #121212;
   margin: 25px 50px 75px 100px;
   padding: 2rem;
   border-radius: 5px;
@@ -32,7 +32,7 @@ body {
 }
 
 .AuthForm {
-  background: #F6F5FC;
+  background:#121212;
   padding: 2rem;
   border-radius: 5px;
   width: 100%;
@@ -51,7 +51,8 @@ body {
 
 .tab-btn {
   padding: 10px 20px;
-  background-color: #2e2b6d;
+  background:#90CAF9;
+  /* background-color: #F5F6FA; */
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -61,8 +62,9 @@ body {
 }
 
 .tab-btn.active {
-  background-color: #8758ff;
+  background-color: #42A5F5;
 }
+
 
 .auth-form {
   width: 100%;
@@ -73,14 +75,16 @@ body {
 }
 
 .auth-form h1 {
-  
+  color:#FFFFFF;
   margin-bottom: 1rem;
   text-align: center;
+  width: 100%;
+font-size: clamp(2rem, 10vw, 2.15rem);
 }
 
 .auth-form label {
   font-size: 0.9rem;
-  /* color: #ffffff; */
+  color: #94A094;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
   text-align: left;
@@ -88,21 +92,20 @@ body {
 
 .auth-input {
   outline: none;
-  background: transparent;
-  border: 1px solid #DBDBE3;
+  background: #05070A;
+  border: 1px solid #566481;
   padding: 0.5rem 1rem;
-  /* color: #fff; */
+  color: #3E485E;
   width: 100%;
   border-radius: 4px;
 }
 
 .auth-input::placeholder {
-  color: #9191A6;
+  color: #ffffff4d;
 }
 
 .auth-btn {
-  background: #314FF9;
-  /* color: #fff; */
+  background: #90CAF9;
   border: none;
   padding: 0.6rem 1.25rem;
   cursor: pointer;
@@ -112,7 +115,7 @@ body {
 }
 
 .auth-btn:hover {
-  background: #6a43d4;
+  background: #42A5F5;
 }
 
 .error-message {
