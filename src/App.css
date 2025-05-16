@@ -429,11 +429,16 @@ font-size: clamp(2rem, 10vw, 2.15rem);
 
 .todo-title {
 
-  font-size: 18px;
+  /* font-size: 18px;
   font-weight: 600;
   margin: 0;
   text-align: center;
+  width: 100%; */
+  color:#FFFFFF;
+  margin-bottom: 1rem;
   width: 100%;
+font-size: clamp(2rem, 10vw, 2.15rem);
+  margin-bottom: 0.5rem;
 
 }
 
