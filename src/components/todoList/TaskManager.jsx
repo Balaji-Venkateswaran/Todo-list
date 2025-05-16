@@ -244,7 +244,7 @@ const TaskManager = () => {
             activeTab === "active" ? activePage <= 1 : completedPage <= 1
           }
         >
-          Previous
+          Prev
         </button>
         <span>
           {activeTab === "active" ? activePage : completedPage} of{" "}
