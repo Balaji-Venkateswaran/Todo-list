@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #070F18;
+  background:#06162B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,9 @@ body {
 }
 
 .AuthForm {
-  background:#121212;
+  /* background:#121212; */
+  box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px,
+  hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
   padding: 2rem;
   border-radius: 5px;
   width: 100%;
@@ -40,6 +42,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-style: solid, ;
+  border-width: medium;
 }
 
 .tabs {

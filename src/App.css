@@ -8,7 +8,11 @@
 }
 
 body {
-  background: #070F18;
+  /* background: #070F18; */
+  background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
+    backgroundRepeat: no-repeat;
+  background-image: radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%));
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,20 +33,38 @@ font-size: clamp(2rem, 10vw, 2.15rem);
 }
 
 .TodoWrapper {
-  background: #121212;
+  /* background: #121212; */
+  background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
+  backgroundRepeat: no-repeat;
+background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
   margin: 25px 50px 75px 100px;
   padding: 2rem;
   border-radius: 5px;
   width: 100vw;
   max-width: 1200px;
+  border-style: solid;
+  border-color:  #222936;
+  border-width: 1px;
 }
 .AuthForm {
-  background:#121212;
+  /* background:#121212; */
+  background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
+  backgroundRepeat: no-repeat;
+  background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
+  box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px,
+  hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
   margin: 25px 50px 75px 100px;
   padding: 2rem;
   border-radius: 5px;
-  width: 100vw;
+  width: 70vw;
   max-width: 1200px;
+  
+  border-style: solid;
+  border-color:  #222936;
+  border-width: 1px;
+
+
+
 }
 
 .TodoForm {
@@ -113,14 +135,33 @@ label {
 
 .task-column {
   flex: 1;
-  background-color:#F7F8FC;
+  background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
+  backgroundRepeat: no-repeat;
+  background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
+  box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px,
+  hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
+  border-style: solid;
+  border-color:  #222936;
+  border-width: 1px;
   padding: 15px;
   border-radius: 8px;
   min-height: 200px;
 }
 
 .task-column h2 {
-  margin-bottom: 10px;
+  color:#FFFFFF;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+font-size: clamp(2rem, 10vw, 2.15rem);
+   margin-bottom: 10px;
+}
+.task-column p {
+  color:#FFFFFF;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+   margin-bottom: 10px;
 }
 
 .Todo {
