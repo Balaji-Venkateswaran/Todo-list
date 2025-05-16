@@ -312,7 +312,11 @@ font-size: clamp(2rem, 10vw, 2.15rem);
   margin-top: 20px;
   gap: 10px;
 }
+.pagination span {
 
+color:#FFFFFF;
+
+}
 .pagination button {
   background-color: #314FF9;
   border: none;
