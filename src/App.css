@@ -405,6 +405,9 @@ color:#FFFFFF;
   background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
   box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px,
   hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
+  border-style: solid;
+  border-color:  #222936;
+  border-width: 1px;
   color: #4f46e5;
   font-weight: bold;
   border-radius: 8px;
