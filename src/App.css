@@ -393,6 +393,9 @@ color:#FFFFFF;
   padding: 16px;
   margin-bottom: 20px;
   position: relative;
+  border-style: solid;
+  border-color:  #222936;
+  border-width: 1px;
 }
 
 .date-badge {
