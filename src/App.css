@@ -379,16 +379,26 @@ font-size: clamp(2rem, 10vw, 2.15rem);
 
 .todo-card {
   display: flex;
-  background: #E2DFF2;
+  /* background: #E2DFF2; */
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+  background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
+  backgroundRepeat: no-repeat;
+  background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
+  box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px,
+  hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
   padding: 16px;
   margin-bottom: 20px;
   position: relative;
 }
 
 .date-badge {
-  background: #eef2ff;
+  /* background: #eef2ff; */
+  background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
+  backgroundRepeat: no-repeat;
+  background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
+  box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px,
+  hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
   color: #4f46e5;
   font-weight: bold;
   border-radius: 8px;
