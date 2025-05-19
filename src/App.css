@@ -429,11 +429,11 @@ color:#FFFFFF;
 
 .todo-title {
   color:#FFFFFF;
-  margin-bottom: 1rem;
-  /* margin-right: 150px; */
+  /* margin-bottom: 1rem; */
+  margin-right: 150px;
 
   width: 100%;
-font-size: clamp(2rem, 10vw, 2.15rem);
+font-size: clamp(2rem, 10vw);
   margin-bottom: 0.5rem;
 
 }
@@ -462,7 +462,7 @@ font-size: clamp(2rem, 10vw, 2.15rem);
 
 .todo-description {
   color:rgb(70, 70, 70);
-  margin: 8px 0;
+  /* margin: 8px 0; */
   text-align:left;
 }
 
