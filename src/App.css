@@ -330,6 +330,7 @@ color:#FFFFFF;
 
 .pagination button:hover {
   background-color: #292C3C;
+  color: white;
 }
 
 .pagination button:disabled {
