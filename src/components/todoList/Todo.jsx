@@ -14,13 +14,13 @@
     toggleComplete,
     showCompletedStatus,
   }) => {
-    const formatDate = (isoString) => {
-      const date = new Date(isoString);
-      return date.toLocaleString("en-IN", {
-        timeZone: "Asia/Kolkata",
-        hour12: true,
-      });
-    };
+    // const formatDate = (isoString) => {
+    //   const date = new Date(isoString);
+    //   return date.toLocaleString("en-IN", {
+    //     timeZone: "Asia/Kolkata",
+    //     hour12: true,
+    //   });
+    // };
 
     const isDueSoon = (dueDate) => {
       const now = new Date();
@@ -54,9 +54,9 @@
               {dateLabel.day} {dateLabel.month}
             </span>
             {/* <span className="date-month">{dateLabel.month}</span> */}
-            {/* {task.dueDate && (
+            {task.dueDate && (
               <p className="todo-date">📅 {formatToIST(task.dueDate)} </p>
-            )} */}
+            )}
 
             {!task.completed && isDueSoon(task.dueDate) && (
               <p className="todo-alert soon">⚠️ Due Soon!</p>
@@ -69,7 +69,7 @@
               <>
                 <p className="todo-status">✅ Completed</p>
                 <p className="todo-completed-time">
-                  📅 {formatDate(task.completedAt)}
+                  📅 {formatToIST(task.completedAt)}
                 </p>
               </>
             )}
