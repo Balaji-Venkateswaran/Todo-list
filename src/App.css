@@ -19,7 +19,7 @@ body {
 }
 
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 h1 {
@@ -154,7 +154,7 @@ font-size: clamp(2rem, 10vw, 2.15rem);
 .task-column p {
   color:#FFFFFF;
   margin-bottom: 1rem;
-  text-align: center;
+  /* text-align: center; */
   width: 100%;
    margin-bottom: 10px;
 }
@@ -434,7 +434,6 @@ color:#FFFFFF;
 
   width: 100%;
 font-size: clamp(2rem, 10vw);
-  margin-bottom: 0.5rem;
 
 }
 

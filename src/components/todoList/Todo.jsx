@@ -55,7 +55,7 @@ export const Todo = ({
           </span>
           {/* <span className="date-month">{dateLabel.month}</span> */}
           {task.dueDate && (
-            <p className="todo-date">📅 {formatToIST(task.dueDate)} </p>
+            <p className="todo-date">📅 {formatToIST()} </p>
           )}
 
           {!task.completed && isDueSoon(task.dueDate) && (
