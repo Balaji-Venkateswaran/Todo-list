@@ -8,7 +8,6 @@
 }
 
 body {
-  /* background: #070F18; */
   background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
     backgroundRepeat: no-repeat;
   background-image: radial-gradient(at 50% 50%, hsla(210, 100%, 16%, 0.5), hsl(220, 30%, 5%));
@@ -33,7 +32,6 @@ font-size: clamp(2rem, 10vw, 2.15rem);
 }
 
 .TodoWrapper {
-  /* background: #121212; */
   background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
   backgroundRepeat: no-repeat;
 background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
@@ -52,7 +50,7 @@ background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 
   background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
   box-shadow: hsla(220, 30%, 5%, 0.5) 0px 5px 15px 0px,
   hsla(220, 25%, 10%, 0.08) 0px 15px 35px -5px;
-  margin: 25px 50px 75px 100px;
+  margin: 60px 50px 75px 100px;
   padding: 2rem;
   border-radius: 5px;
   width: 70vw;  
@@ -91,15 +89,17 @@ label {
 }
 
 .todo-btn {
-  background:#90CAF9;
+  background:rgb(255, 255, 255);;
   border: none;
   padding: 0.55rem 1.25rem;
   cursor: pointer;
   transition: background 0.3s ease;
+  border-radius: 5px;
+
 }
 
 .todo-btn:hover {
-  background: #42A5F5;
+  background: #C2C9D6;
 }
 
 .tabs {
@@ -110,18 +110,16 @@ label {
 
 .tab-btn {
   padding: 10px 20px;
-  background:#90CAF9;
-  /* background-color: #F5F6FA; */
+  background:rgb(255, 255, 255);;
   border: none;
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  /* color: #fff; */
   transition: background 0.3s;
 }
 
 .tab-btn.active {
-  background-color: #42A5F5;
+  background-color: #C2C9D6;
 }
 
 .task-columns {
@@ -326,7 +324,7 @@ color:#FFFFFF;
 }
 
 .pagination button.active {
-  background-color: #8758ff;
+  background-color: #C2C9D6;
   transform: scale(1.1);
 }
 
@@ -351,7 +349,6 @@ color:#FFFFFF;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* background-color: #f4f4f4; */
   padding: 10px 20px;
   top: 0;
   z-index: 1000;
@@ -369,7 +366,7 @@ color:#FFFFFF;
 }
 
 .logout-btn:hover {
-  background-color: #d9363e;
+  background-color: #C2C9D6;
 }
 
 
@@ -379,9 +376,7 @@ color:#FFFFFF;
 
 .todo-card {
   display: flex;
-  /* background: #E2DFF2; */
   border-radius: 12px;
-  /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
   background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
   backgroundRepeat: no-repeat;
   background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
@@ -396,7 +391,6 @@ color:#FFFFFF;
 }
 
 .date-badge {
-  /* background: #eef2ff; */
   background-image: radial-gradient(ellipse at 50% 50%, hsl(210, 100%, 97%), hsl(0, 0%, 100%));
   backgroundRepeat: no-repeat;
   background-image: radial-gradient(at 50% 50%,hsl(220, 30%, 5%), hsla(210, 100%, 16%, 0.5) );
@@ -434,12 +428,6 @@ color:#FFFFFF;
 }
 
 .todo-title {
-
-  /* font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-  text-align: center;
-  width: 100%; */
   color:#FFFFFF;
   margin-bottom: 1rem;
   width: 100%;
@@ -447,17 +435,6 @@ font-size: clamp(2rem, 10vw, 2.15rem);
   margin-bottom: 0.5rem;
 
 }
-
-/* .todo-actions {
-  display: flex;
-  gap: 12px;
-}
-
-.action-icon {
-  cursor: pointer;
-  color: #4b5563;
-  transition: color 0.2s;
-} */
 
 .todo-actions {
   display: flex;
