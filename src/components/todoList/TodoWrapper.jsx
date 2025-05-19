@@ -160,7 +160,7 @@ export const TodoWrapper = () => {
           Logout
         </button>
       </div>
-      <h1>TODO LIST!!!</h1>
+      <h1>TODO LIST</h1>
       <TodoForm
         addTodo={addTodo}
         fetchTodos={() => fetchActiveTodos(activePage)}
