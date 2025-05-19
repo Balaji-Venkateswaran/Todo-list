@@ -447,7 +447,7 @@ font-size: clamp(2rem, 10vw, 2.15rem);
 
 .action-icon {
   cursor: pointer;
-  color: #4b5563;
+  color:rgb(176, 185, 197);
   transition: color 0.2s;
   font-size: 16px;
   padding-top: 4px; 
